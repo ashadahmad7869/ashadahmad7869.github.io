@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Ashad Ahmad</title>
@@ -14,9 +15,15 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<div class="logo-container">
+							<video class="logo-video" autoplay muted playsinline loop>
+								<source src="images/avataar_vid.mp4" type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+						</div>
 						<h1>Ashad Ahmad</h1>
-						<p>Astronomy Postgrad | IIT Indore | Aspiring Astrophysicist</p>
+						<p id="delayed-intro" class="hidden">Junior Research Fellow | Physical Research Laboratory (PRL), Ahmedabad | Aspiring Astrophysicist</p>
+
 					</header>
 
 				<!-- Nav -->
@@ -138,7 +145,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Insert Title Here</h2>
+							<h2>Collaborations</h2>
 							<p>If you wish to have a chat about my work and/or want to collaborate with me,
 								please free to contact me!
 							</p>
@@ -150,15 +157,15 @@
 							<h2>Contact Details</h2>
 							<dl class="alt">
 								<dt>Address</dt>
-								<dd>612-D, Vikram Sarabhai Hostel, Indian Institute of Technology Indore, 
-									Khandwa Road, Simrol, Indore, Madhya Pradesh, India, 452020
+								<dd>PRL Thaltej Campus, Sindhu Bhavan Road,
+									Thaltej, Ahmedabad, Gujarat, 380058
 								</dd>
-								<dt>Phone</dt>
+								<dt>Phone/Whatsapp</dt>
 								<dd>(+91) 736 796 4082</dd>
 								<dt>Personal Email</dt>
 								<dd><a href="#">ashadahmad4567@gmail.com</a></dd>
 								<dt>Work Email</dt>
-								<dd><a href="#">msc2203121010@iiti.ac.in</a></dd>
+								<dd><a href="#">ashadahmad@prl.res.in</a></dd>
 							</dl>
 							<ul class="icons">
 								<li><a href="https://twitter.com/ahmadasad_7869" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
@@ -179,6 +186,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				window.addEventListener("load", () => {
+					setTimeout(() => {
+						const intro = document.getElementById("delayed-intro");
+						if (intro) {
+							intro.classList.remove("hidden");
+							intro.classList.add("fade-in");
+						}
+					}, 2000); // delay in milliseconds
+				});
+			</script>
 
 	</body>
 </html>
