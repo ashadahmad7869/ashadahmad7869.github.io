@@ -1,0 +1,99 @@
+/* keep icon visible */
+.home-button i::before {
+    display: inline-block !important;
+}
+
+/* remove template decorative ring */
+.home-button::before,
+.home-button::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* stop theme's "major icon" styling inheritance */
+.home-button.icon,
+.home-button.icon.major {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* prevent global .icon styles leaking */
+.home-button {
+    text-decoration: none;
+}
+
+.home-button {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+
+    text-decoration: none;
+    z-index: 10000;
+
+    transition: all 0.25s ease;
+}
+
+.home-button:hover {
+    background: white;
+    color: #2c6faa;
+    transform: scale(1.1);
+}
+
+
+.research-block {
+    max-width: 1400px;
+    margin: 80px auto;
+    line-height: 1.8;
+}
+
+.research-block h2 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.research-block p {
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+
+/* IMAGE PANEL */
+.figures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.figures figure {
+    text-align: center;
+    margin: 0;
+}
+
+.figures img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.figures figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
